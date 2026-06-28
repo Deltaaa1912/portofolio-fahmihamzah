@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fahmi Hamzah — Portfolio</title>
+  <meta name="description" content="Videografer, Video Editor, UI/UX Designer & Cyber Security Specialist berbasis di Jakarta." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="logo">Delta.DEV</a>
+      <ul class="nav-links">
+        <li><a href="#skills" class="nav-link">Keahlian</a></li>
+        <li><a href="#projects" class="nav-link">Karya</a></li>
+        <li><a href="#about" class="nav-link">Tentang</a></li>
+        <li><a href="#contact" class="nav-link">Kontak</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="status-dot" title="Available for work">
+          <span class="dot-pulse"></span>
+          <span class="dot-label">Available</span>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#skills" class="nav-link mobile-link">Keahlian</a></li>
+        <li><a href="#projects" class="nav-link mobile-link">Karya</a></li>
+        <li><a href="#about" class="nav-link mobile-link">Tentang</a></li>
+        <li><a href="#contact" class="nav-link mobile-link">Kontak</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="hero">
+    <div class="grid-bg" aria-hidden="true"></div>
+    <div class="hero-layout">
+      <!-- LEFT: Text -->
+      <div class="hero-inner reveal">
+        <div class="hero-tag">
+          <span class="tag-dot"></span>
+          OPEN TO WORK
+        </div>
+        <h1 class="hero-title">
+          <span class="line1">Kreator Visual.</span>
+          <span class="line2">Pengawal Digital.</span>
+        </h1>
+        <p class="hero-desc">
+          Menggabungkan seni sinematik dan keamanan siber — dari lensa kamera hingga terminal, dari Figma hingga firewall.
+        </p>
+        <div class="hero-badges">
+          <span class="badge highlight">Videografi</span>
+          <span class="badge highlight">Video Editing</span>
+          <span class="badge highlight">UI/UX Figma</span>
+          <span class="badge highlight">Cyber Security</span>
+          <span class="badge">Tangerang Selatan, ID</span>
+        </div>
+        <div class="hero-cta">
+          <a href="#projects" class="btn-primary">▶ Lihat Karya</a>
+          <a href="#contact" class="btn-ghost">Hubungi Saya →</a>
+        </div>
+      </div>
+
+      <!-- RIGHT: ID Card with Lanyard -->
+      <div class="hero-card-area reveal" data-delay="200">
+        <div class="lanyard-wrapper" id="lanyardWrapper">
+
+          <!-- Fixed clip at the very top — anchored to the page, doesn't swing -->
+          <div class="lanyard-anchor" aria-hidden="true">
+            <span class="anchor-clip"></span>
+          </div>
+
+          <!-- Strap + metal clip + card all swing together as one rigid lanyard -->
+          <div class="lanyard-swing" id="lanyardSwing">
+
+            <!-- Fabric strap -->
+            <div class="lanyard-strap" aria-hidden="true">
+              <span class="strap-stitch"></span>
+              <span class="strap-text">Delta.DEV ·</span>
+              <span class="strap-text">Delta.DEV ·</span>
+              <span class="strap-stitch"></span>
+            </div>
+
+            <!-- Metal swivel clip joining strap to the card -->
+            <div class="lanyard-clip" aria-hidden="true">
+              <span class="clip-ring"></span>
+              <span class="clip-pinch"></span>
+            </div>
+
+            <!-- ID CARD -->
+            <div class="id-card" id="idCard">
+              <span class="id-punch" aria-hidden="true"></span>
+              <div class="id-card-inner">
+
+                <!-- Card header -->
+                <div class="id-card-header">
+                  <span class="id-card-org">Delta.DEV</span>
+                  <span class="id-card-year">2026</span>
+                </div>
+
+                <!-- Photo slot -->
+                <div class="id-photo-wrapper">
+                  <div class="id-photo" id="idPhoto">
+                    <!-- Ganti src dengan foto kamu -->
+                    <img src="c:\Users\fahmi\OneDrive\Pictures\Saved Pictures\4x6.png" alt="Foto profil"
+                      onerror="this.style.display='none'; this.parentElement.classList.add('no-photo')" />
+                    <span class="id-photo-placeholder">📷</span>
+                  </div>
+                </div>
+
+                <!-- Info -->
+                <div class="id-info">
+                  <div class="id-name">FAHMI HAMZAH</div>
+                  <div class="id-role">Videografer · Editor · UI/UX · Cybersec</div>
+                  <div class="id-uni">Tangsel, Indonesia</div>
+                </div>
+
+                <!-- Divider -->
+                <div class="id-divider"></div>
+
+                <!-- Badges row -->
+                <div class="id-badges">
+                  <span class="id-badge">🎥</span>
+                  <span class="id-badge">✂️</span>
+                  <span class="id-badge">🎨</span>
+                  <span class="id-badge">🛡️</span>
+                </div>
+
+                <!-- Barcode -->
+                <div class="id-barcode">
+                  <div class="barcode-bars" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                  <div class="barcode-num">Delta-2026-001</div>
+                </div>
+
+                <!-- Gold border shine -->
+                <div class="id-shine" aria-hidden="true"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Drag hint -->
+          <p class="drag-hint" id="dragHint">↕ geser kartunya</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating particles -->
+    <canvas id="particleCanvas" aria-hidden="true"></canvas>
+  </section>
+
+  <!-- ===== STATS ===== -->
+  <div class="stats-wrapper">
+    <div class="stats-row reveal">
+      <div class="stat">
+        <span class="stat-num" data-target="5">0</span>
+        <span class="stat-suffix">+</span>
+        <span class="stat-label">Project Selesai</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" data-target="4">0</span>
+        <span class="stat-suffix"></span>
+        <span class="stat-label">Bidang Keahlian</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" data-target="2">0</span>
+        <span class="stat-suffix">yr+</span>
+        <span class="stat-label">Pengalaman</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" data-target="100">0</span>
+        <span class="stat-suffix">%</span>
+        <span class="stat-label">Klien Puas</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section">
+    <div class="section-label reveal">01 — KEAHLIAN</div>
+    <h2 class="section-title reveal">Apa yang Saya Kuasai</h2>
+    <p class="section-sub reveal">Kombinasi unik antara dunia kreatif dan dunia teknis.</p>
+
+    <div class="skills-grid">
+      <div class="skill-card cam reveal" data-delay="0">
+        <div class="skill-icon">🎥</div>
+        <div class="skill-name">Videografi</div>
+        <p class="skill-desc">Pengambilan gambar sinematik, komposisi frame, pencahayaan alami dan buatan untuk berbagai jenis konten.</p>
+        <div class="skill-tools">
+          <span class="tool-tag">DSLR / Mirrorless</span>
+          <span class="tool-tag">Gimbal</span>
+          <span class="tool-tag">Lighting</span>
+        </div>
+      </div>
+      <div class="skill-card edit reveal" data-delay="100">
+        <div class="skill-icon">✂️</div>
+        <div class="skill-name">Video Editing</div>
+        <p class="skill-desc">Post-production profesional: color grading, motion graphics, sound design, dan storytelling visual yang kuat.</p>
+        <div class="skill-tools">
+          <span class="tool-tag">Premiere Pro</span>
+          <span class="tool-tag">CapCut</span>
+        </div>
+      </div>
+      <div class="skill-card design reveal" data-delay="200">
+        <div class="skill-icon">🎨</div>
+        <div class="skill-name">UI/UX Design</div>
+        <p class="skill-desc">Merancang antarmuka yang intuitif dan estetis — dari wireframe hingga prototype interaktif siap developer.</p>
+        <div class="skill-tools">
+          <span class="tool-tag">Figma</span>
+          <span class="tool-tag">Prototyping</span>
+          <span class="tool-tag">Design System</span>
+          <span class="tool-tag">Wireframe</span>
+        </div>
+      </div>
+      <div class="skill-card sec reveal" data-delay="300">
+        <div class="skill-icon">🛡️</div>
+        <div class="skill-name">Cyber Security</div>
+        <p class="skill-desc">Analisis keamanan, penetration testing, threat hunting, dan hardening sistem untuk melindungi aset digital.</p>
+        <div class="skill-tools">
+          <span class="tool-tag">Kali Linux</span>
+          <span class="tool-tag">Wireshark</span>
+          <span class="tool-tag">Metasploit</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section">
+    <div class="section-label reveal">02 — KARYA</div>
+    <h2 class="section-title reveal">Pengalaman Proyek</h2>
+    <p class="section-sub reveal">Sebagian kecil dari pekerjaan yang pernah saya selesaikan.</p>
+
+    <!-- Filter buttons -->
+    <div class="filter-bar reveal">
+      <button class="filter-btn active" data-filter="all">Semua</button>
+      <button class="filter-btn" data-filter="video">Video</button>
+      <button class="filter-btn" data-filter="design">Design</button>
+      <button class="filter-btn" data-filter="security">Security</button>
+    </div>
+
+    <div class="projects-grid" id="projectsGrid">
+      <div class="project-card reveal" data-category="video">
+        <div class="project-thumb thumb-video">
+          <div class="thumb-overlay">
+            <span class="thumb-icon">🎬</span>
+            <span class="thumb-play">▶</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-cat">VIDEOGRAFI · EDITING</div>
+          <div class="project-title">Brand Film — Produk Lokal</div>
+          <p class="project-desc">Video iklan sinematik 2 menit untuk brand fashion lokal. Meliputi produksi penuh dari konsep hingga color grading final.</p>
+          <div class="project-tags">
+            <span class="tool-tag">Premiere Pro</span>
+            <span class="tool-tag">Color Grading</span>
+            <span class="tool-tag">CapCut</span>
+          </div>
+          <a href="#" class="project-link">Lihat Proyek →</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-category="video">
+        <div class="project-thumb thumb-doc">
+          <div class="thumb-overlay">
+            <span class="thumb-icon">🎞️</span>
+            <span class="thumb-play">▶</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-cat">FILM </div>
+          <div class="project-title">Short Documentary — Komunitas</div>
+          <p class="project-desc">Film dokumenter pendek 15 menit tentang komunitas seni jalanan Jakarta. Ditayangkan di festival film indie lokal.</p>
+          <div class="project-tags">
+            <span class="tool-tag">Camera</span>
+            <span class="tool-tag">Gaffer</span>
+          </div>
+          <a href="#" class="project-link">Lihat Proyek →</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-category="design">
+        <div class="project-thumb thumb-design">
+          <div class="thumb-overlay">
+            <span class="thumb-icon">🖼️</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-cat">UI/UX DESIGN</div>
+          <div class="project-title">Redesign App E-Commerce</div>
+          <p class="project-desc">Redesain lengkap aplikasi belanja dengan fokus pada konversi checkout dan pengalaman pengguna yang mulus di mobile.</p>
+          <div class="project-tags">
+            <span class="tool-tag">Figma</span>
+            <span class="tool-tag">User Research</span>
+            <span class="tool-tag">Prototype</span>
+          </div>
+          <a href="#" class="project-link">Lihat Desain →</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-category="design">
+        <div class="project-thumb thumb-ui">
+          <div class="thumb-overlay">
+            <span class="thumb-icon">📱</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-cat">UI/UX DESIGN</div>
+          <div class="project-title">Dashboard Analytics — SaaS</div>
+          <p class="project-desc">Desain dashboard data visualisasi untuk platform SaaS B2B. Fokus pada keterbacaan data dan efisiensi workflow pengguna.</p>
+          <div class="project-tags">
+            <span class="tool-tag">Figma</span>
+            <span class="tool-tag">Design System</span>
+          </div>
+          <a href="#" class="project-link">Lihat Desain →</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-category="security">
+        <div class="project-thumb thumb-sec">
+          <div class="thumb-overlay">
+            <span class="thumb-icon">🔐</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-cat">CYBER SECURITY</div>
+          <div class="project-title">Security Audit — Startup Fintech</div>
+          <p class="project-desc">Audit keamanan menyeluruh termasuk web vulnerability assessment, network scanning, dan laporan remediasi lengkap.</p>
+          <div class="project-tags">
+            <span class="tool-tag">Pentest</span>
+            <span class="tool-tag">Nmap</span>
+          </div>
+          <a href="#" class="project-link">Lihat Laporan →</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-category="security">
+        <div class="project-thumb thumb-sec2">
+          <div class="thumb-overlay">
+            <span class="thumb-icon">🕵️</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-cat">CYBER SECURITY · OSINT</div>
+          <div class="project-title">OSINT Investigation Report</div>
+          <p class="project-desc">Investigasi open-source intelligence untuk keperluan due diligence perusahaan. Menghasilkan laporan komprehensif 40+ halaman.</p>
+          <div class="project-tags">
+            <span class="tool-tag">OSINT</span>
+            <span class="tool-tag">Maltego</span>
+            <span class="tool-tag">Recon</span>
+          </div>
+          <a href="#" class="project-link">Lihat Laporan →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <div class="section-label reveal">03 — TENTANG</div>
+    <div class="about-grid">
+      <div class="about-text">
+        <h2 class="section-title reveal">Saya bukan<br>hanya satu hal.</h2>
+        <p class="reveal" style="color:var(--muted);line-height:1.9;margin-bottom:1rem">
+          Di balik kamera, saya merekam cerita. Di balik layar, saya melindungi sistem. Kombinasi ini bukan kebetulan — kreativitas dan logika adalah dua sisi dari cara saya berpikir.
+        </p>
+        <p class="reveal" style="color:var(--muted);line-height:1.9;margin-bottom:2rem">
+          Terbuka untuk kolaborasi: produksi video, desain UI, konsultasi keamanan siber, atau proyek lintas disiplin yang butuh perspektif berbeda.
+        </p>
+        <div class="terminal-block reveal">
+          <div class="terminal-header">
+            <span class="t-dot red"></span>
+            <span class="t-dot yellow"></span>
+            <span class="t-dot green"></span>
+            <span class="t-title">terminal — profile.js</span>
+          </div>
+          <div class="terminal-body">
+            <span class="t-comment">// status saat ini</span><br>
+            <span class="t-key">const</span> saya = {<br>
+            &nbsp;&nbsp;nama: <span class="t-str">"Fahmi Hamzah"</span>,<br>
+            &nbsp;&nbsp;status: <span class="t-str">"available"</span>,<br>
+            &nbsp;&nbsp;lokasi: <span class="t-str">"Tangerang Selatan, ID"</span>,<br>
+            &nbsp;&nbsp;mode: <span class="t-val">["kreatif", "teknis"]</span>,<br>
+            &nbsp;&nbsp;coffee: <span class="t-str">"always ☕"</span><br>
+            };<br><br>
+            <span class="t-comment">// keahlian</span><br>
+            <span class="t-key">const</span> skills = [<br>
+            &nbsp;&nbsp;<span class="t-str">"Videografi"</span>,<br>
+            &nbsp;&nbsp;<span class="t-str">"Video Editing"</span>,<br>
+            &nbsp;&nbsp;<span class="t-str">"UI/UX Figma"</span>,<br>
+            &nbsp;&nbsp;<span class="t-str">"Cyber Security"</span><br>
+            ];<span class="cursor-blink">|</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-visual-wrapper reveal">
+        <div class="about-visual">
+          <span class="about-emoji">🎞️</span>
+          <div class="about-orbit" aria-hidden="true">
+            <span class="orbit-icon" style="--i:0">🎥</span>
+            <span class="orbit-icon" style="--i:1">✂️</span>
+            <span class="orbit-icon" style="--i:2">🎨</span>
+            <span class="orbit-icon" style="--i:3">🛡️</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section">
+    <div class="section-label reveal">04 — KONTAK</div>
+    <div class="contact-box reveal">
+      <h2 class="section-title">Ada Proyek? Mari Bicara.</h2>
+      <p class="contact-sub">Selalu terbuka untuk peluang baru, kolaborasi, atau sekadar ngobrol tentang video dan security.</p>
+
+      <!-- Contact Form -->
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Nama</label>
+            <input type="text" id="name" name="name" placeholder="Nama kamu" required />
+            <span class="form-error" id="nameError"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="email@gmail.com" required />
+            <span class="form-error" id="emailError"></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="subject">Topik</label>
+          <select id="subject" name="subject">
+            <option value="">— Pilih topik —</option>
+            <option value="video">Produksi Video</option>
+            <option value="design">UI/UX Design</option>
+            <option value="security">Cyber Security</option>
+            <option value="collab">Kolaborasi</option>
+            <option value="other">Lainnya</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Pesan</label>
+          <textarea id="message" name="message" rows="4" placeholder="Ceritakan proyekmu..." required></textarea>
+          <span class="form-error" id="messageError"></span>
+        </div>
+        <button type="submit" class="btn-primary btn-full" id="submitBtn">
+          <span id="btnText">Kirim Pesan →</span>
+        </button>
+        <div class="form-success" id="formSuccess">
+          ✅ Pesan terkirim! Saya akan membalas dalam 24 jam.
+        </div>
+      </form>
+
+      <div class="contact-divider"><span>atau temukan saya di</span></div>
+
+      <div class="social-row">
+        <a href="https://www.instagram.com/fahmihamzah_1912?igsh=MW44em8yaGVxa2Vrbw==" class="social-btn" target="_blank" rel="noopener">
+          <span>📸</span> Instagram
+        </a>
+        <a href="https://www.linkedin.com/in/muhammad-fahmi-hamzah-164178320?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="social-btn" target="_blank" rel="noopener">
+          <span>💼</span> LinkedIn
+        </a>
+        <a href="https://github.com/Deltaaa1912" class="social-btn" target="_blank" rel="noopener">
+          <span>🐙</span> GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Delta.Dev © 2026</div>
+      <div class="footer-logo">Email - fahmi.hamzah1912@gmail.com</div>
+      <div class="footer-logo">Telp - +62 896-5420-8727</div>
+      <div class="footer-copy">Dibuat dengan Segelas ☕ di Tangsel</div>
+      <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">↑</button>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
