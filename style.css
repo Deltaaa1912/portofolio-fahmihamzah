@@ -71,6 +71,7 @@ button { font-family: inherit; cursor: pointer; }
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 2rem;
 }
 
 .logo {
@@ -115,14 +116,13 @@ button { font-family: inherit; cursor: pointer; }
   display: flex;
   align-items: center;
   gap: 1.25rem;
-  margin-right: 8rem;
+  margin-right: 1.5rem;
 }
 
 .status-dot {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin-left: auto;
 }
 .dot-pulse {
   width: 8px; height: 8px;
@@ -194,6 +194,7 @@ button { font-family: inherit; cursor: pointer; }
   padding-bottom: 10rem;
   position: relative;
   overflow: hidden;
+  isolation: isolate;
 }
 
 /* Hero text hugs the left edge (no centered max-width); ID card floats on the right */
@@ -240,11 +241,6 @@ button { font-family: inherit; cursor: pointer; }
     linear-gradient(90deg, rgba(0,229,255,0.03) 1px, transparent 1px);
   background-size: 60px 60px;
   mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
-}
-
-.hero, .section, .stats-wrapper, footer {
-  position: relative;
-  z-index: 1;
 }
 
 #particleCanvas {
