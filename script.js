@@ -1,13 +1,6 @@
-/* =============================================
-   VCRX STUDIO — Portfolio JavaScript
-   Author: VCRX Studio
-   ============================================= */
-
 'use strict';
 
-// =============================================
 // 1. NAVBAR — scroll detection & active link
-// =============================================
 const navbar    = document.getElementById('navbar');
 const navLinks  = document.querySelectorAll('.nav-link:not(.mobile-link)');
 const sections  = document.querySelectorAll('section[id]');
@@ -34,9 +27,7 @@ function onScroll() {
 window.addEventListener('scroll', onScroll, { passive: true });
 onScroll(); // run once on load
 
-// =============================================
 // 2. HAMBURGER / MOBILE MENU
-// =============================================
 const hamburger  = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 
@@ -55,9 +46,7 @@ document.querySelectorAll('.mobile-link').forEach(link => {
   });
 });
 
-// =============================================
 // 3. SCROLL REVEAL
-// =============================================
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach(entry => {
@@ -73,9 +62,7 @@ const revealObserver = new IntersectionObserver(
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-// =============================================
 // 4. COUNTER ANIMATION (stats)
-// =============================================
 const counterObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach(entry => {
@@ -110,9 +97,7 @@ function animateCounters(container) {
   });
 }
 
-// =============================================
 // 5. PROJECT FILTER
-// =============================================
 const filterBtns  = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.project-card');
 
@@ -140,9 +125,7 @@ filterBtns.forEach(btn => {
   });
 });
 
-// =============================================
 // 6. CONTACT FORM VALIDATION & SUBMIT
-// =============================================
 const form       = document.getElementById('contactForm');
 const submitBtn  = document.getElementById('submitBtn');
 const btnText    = document.getElementById('btnText');
@@ -213,16 +196,12 @@ function fakeSubmit() {
   return new Promise(resolve => setTimeout(resolve, 1200));
 }
 
-// =============================================
 // 7. BACK TO TOP
-// =============================================
 document.getElementById('backToTop')?.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// =============================================
 // 8. PARTICLE CANVAS (hero background)
-// =============================================
 (function initParticles() {
   const canvas = document.getElementById('particleCanvas');
   if (!canvas) return;
@@ -296,9 +275,7 @@ document.getElementById('backToTop')?.addEventListener('click', () => {
   draw();
 })();
 
-// =============================================
 // 9. SMOOTH ANCHOR SCROLL (offset for fixed nav)
-// =============================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', (e) => {
     const target = document.querySelector(anchor.getAttribute('href'));
@@ -313,9 +290,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
-// =============================================
 // 11. LANYARD ID CARD — drag + pendulum physics
-// =============================================
 (function initLanyard() {
   const swing   = document.getElementById('lanyardSwing');
   const card    = document.getElementById('idCard');
