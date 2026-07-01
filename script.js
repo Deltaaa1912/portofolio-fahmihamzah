@@ -218,7 +218,7 @@ document.getElementById('backToTop')?.addEventListener('click', () => {
   resize();
 
   const PARTICLE_COUNT = 60;
-  const COLOR = '0, 229, 255';
+  const COLOR = '56, 189, 248';
 
   function createParticle() {
     return {
@@ -436,4 +436,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
   setTimeout(type, 600); // start after brief delay
 })();
-
