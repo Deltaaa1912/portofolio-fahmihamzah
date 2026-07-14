@@ -434,5 +434,83 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   }
 
+
   setTimeout(type, 600); // start after brief delay
+})();
+
+// ─── EMAILJS CONTACT FORM ───────────────────────────────────────────────────
+const EMAILJS_PUBLIC_KEY  = 'IZGidtWN1f9pj6vxA';   // Account → Public Key
+const EMAILJS_SERVICE_ID  = 'service_bxbbhq7';        // Email Services → Service ID
+const EMAILJS_TEMPLATE_ID = 'template_fkkbydo';       // Email Templates → Template ID
+
+(function initContactForm() {
+  // Inisialisasi EmailJS
+  if (typeof emailjs === 'undefined') return;
+  emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+
+  const form       = document.getElementById('contactForm');
+  const btnText    = document.getElementById('btnText');
+  const submitBtn  = document.getElementById('submitBtn');
+  const successBox = document.getElementById('formSuccess');
+  const nameErr    = document.getElementById('nameError');
+  const emailErr   = document.getElementById('emailError');
+  const msgErr     = document.getElementById('messageError');
+
+  if (!form) return;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Reset errors
+    [nameErr, emailErr, msgErr].forEach(el => { if (el) el.textContent = ''; });
+
+    const name    = form.name.value.trim();
+    const email   = form.email.value.trim();
+    const subject = form.subject.value;
+    const message = form.message.value.trim();
+
+    // Validasi
+    let valid = true;
+    if (!name)    { if (nameErr)  nameErr.textContent  = 'Nama wajib diisi.';  valid = false; }
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      if (emailErr) emailErr.textContent = 'Email tidak valid.'; valid = false;
+    }
+    if (!message) { if (msgErr)   msgErr.textContent   = 'Pesan wajib diisi.'; valid = false; }
+    if (!valid) return;
+
+    // Loading state
+    submitBtn.disabled = true;
+    if (btnText) btnText.textContent = 'Mengirim…';
+
+    try {
+      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+        name:    name,
+        email:   email,
+        subject: subject || 'Pesan dari Portfolio',
+        message: message,
+      });
+
+      // Sukses
+      form.reset();
+      if (successBox) {
+        successBox.textContent = '✅ Pesan terkirim! Saya akan membalas dalam 24 jam.';
+        successBox.style.display = 'block';
+        setTimeout(() => { successBox.style.display = 'none'; }, 6000);
+      }
+    } catch (err) {
+      console.error('EmailJS error:', err);
+      if (successBox) {
+        successBox.textContent = '❌ Gagal mengirim pesan. Coba lagi atau hubungi via Instagram/LinkedIn.';
+        successBox.style.display = 'block';
+        successBox.style.color = '#f43f5e';
+        setTimeout(() => {
+          successBox.style.display = 'none';
+          successBox.style.color = '';
+        }, 6000);
+      }
+    } finally {
+      submitBtn.disabled = false;
+      if (btnText) btnText.textContent = 'Kirim Pesan →';
+    }
+  });
 })();
