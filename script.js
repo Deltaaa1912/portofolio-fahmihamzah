@@ -438,7 +438,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   setTimeout(type, 600); // start after brief delay
 })();
 
-// ─── EMAILJS CONTACT FORM ───────────────────────────────────────────────────
+// ─── EMAILJS CONTACT FORM ──
 const EMAILJS_PUBLIC_KEY  = 'IZGidtWN1f9pj6vxA';   // Account → Public Key
 const EMAILJS_SERVICE_ID  = 'service_bxbbhq7';        // Email Services → Service ID
 const EMAILJS_TEMPLATE_ID = 'template_fkkbydo';       // Email Templates → Template ID

@@ -885,7 +885,7 @@ button { font-family: inherit; cursor: pointer; }
 .skill-card:hover { background: var(--bg3); }
 .skill-card:hover::before { opacity: 1; }
 
-.skill-icon { font-size: 2rem; margin-bottom: 1rem; display: block; }
+.skill-icon { margin-bottom: 1rem; display: flex; align-items: center; justify-content: flex-start; width: 52px; height: 52px; }
 
 .skill-name {
   font-weight: 600;
@@ -1216,7 +1216,70 @@ button { font-family: inherit; cursor: pointer; }
   color: var(--accent);
   box-shadow: 0 4px 12px rgba(124, 58, 237, 0.12);
 }
-/* CONTACT */
+
+/* Hard Skill categorized list */
+.hardskill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hardskill-item {
+  border-left: 2px solid var(--border);
+  padding-left: 0.85rem;
+  transition: border-color 0.2s;
+}
+
+.hardskill-item:hover {
+  border-left-color: var(--accent);
+}
+
+.hardskill-header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.hardskill-header svg {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.hardskill-cat {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.02em;
+}
+
+.hardskill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.hardskill-tags span {
+  padding: 0.22rem 0.55rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg2);
+  color: var(--muted);
+  font-size: 0.75rem;
+  transition: all 0.2s ease;
+  cursor: default;
+  user-select: none;
+}
+
+.hardskill-tags span:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--bg);
+  box-shadow: 0 3px 10px rgba(124, 58, 237, 0.1);
+}
+
+
 .contact-box {
   background: var(--card);
   border: 1px solid var(--border);
