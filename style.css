@@ -1522,6 +1522,9 @@ footer {
   .hero-layout { flex-direction: column; gap: 3rem; }
   .hero-card-area { justify-content: center; width: 100%; }
   .hero-inner { max-width: 100%; }
+  .lanyard-wrapper {
+    transform: none;
+  }
 }
 
 @media (max-width: 680px) {
