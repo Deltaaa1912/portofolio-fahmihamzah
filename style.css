@@ -113,7 +113,13 @@ button { font-family: inherit; cursor: pointer; }
   color: var(--accent);
   transition: opacity var(--transition);
 }
-.logo:hover { opacity: 0.75; }
+.logo:hover { 
+  display: block;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+ }
 
 .nav-links {
   display: flex;
@@ -754,8 +760,10 @@ button { font-family: inherit; cursor: pointer; }
   transition: all var(--transition);
 }
 .btn-ghost:hover {
-  border-color: var(--muted);
+  color: var(--bg);
+  background: linear-gradient(135deg, #2563eb, #0f172a);
   transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37,99,235,0.35)
 }
 
 .btn-full { width: 100%; justify-content: center; }
